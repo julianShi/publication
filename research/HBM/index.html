@@ -1,6 +1,6 @@
 <html>
-	<head>
-		<title>work</title>
+<head>
+		<title>Harmonic Balance method</title>
 		<!-- bootstrap -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<!-- Mathjax -->
@@ -11,31 +11,23 @@
 		<script type="text/javascript"
 		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		</script>
-	</head>
-	<body>
-		<div class="row container">
-			<div class="col-md-12">
-				<h1>What do you do in your contact problem research? How does it help aviation simulations?</h1>
-			</div>
-			<div class="col-md-12">
-				<p>	Contact solvers are irreplaceable in developing simulation software. For example, in aircraft simulation, we use contact solver to detect collision and calculate the contact force during landing. </p>
+		<!-- include the user-customized style -->
+		<link rel="stylesheet" type="text/css" href="../../assets/style.css">
 
-	    		<p>There are several approaches of treating contact problems. E.g. the robot operating system choose like DAST physics engine which assumes that the contact bodies are rigid. But you know, the aircraft tire is soft. </p>
-	    		<center>
-			    <img  width="45%" src="tsukuba.jpg">
-			    <img  width="45%" src="tsukuba.jpg">
-			    </center>
-	    	</div>
-	    	<div class="col-md-6">
-	    	</div>
-	    	<div class="col-md-12">
-			    <p>The famous simulation software Ansys can be used for solving soft contact problem. It uses finite element method (FEM) to discretize soft bodies into discrete meshes. Then reformulate the continuous displacement fields of soft bodies in finite vector forms, and solve them numerically. </p>
+</head>
+<body>
+	<h1> Use the harmonic balance method for solving semismooth problem</h1>
+		<h2>Semismooth problem statement</h2>
 
-	    		<p>But the contact solvers used in the Ansys still suffer greatly from low accuracy problem. Because contact force is intrinsically a dirac delta function which invalids the traditional ODE solvers like Euler method and Newmark method. That is to say, the solution does not converge (to true solutions even if we decrease time stepping size and mesh size). </p>
+		<h2>General Harmonic Balance Method</h2>
+		
+		<p>Galerkin method. 
+		for solving the equation
 
-
-	    		<p>So, in my research, I use FEM to turn a contact problem into a linear complimentary problem. Then I compare nonlinear programming algorithms including Lemke algorithm, semismooth algorithm and augmented Lagrangian algorithm. It was found that the choice of empirical parameters in these algorithms have great influence on the convergence and convergence speed of the contact problems. For detail discussions, please refer to my thesis:) </p>
-	    	</div>
-	    </div>
-	 </body>
-</html>
+		\begin{equation}
+			f(x)=0
+		\end{equation}
+	</p>
+		
+	</ol>
+</body>
