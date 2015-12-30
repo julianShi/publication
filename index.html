@@ -14,7 +14,8 @@
 		<style type="text/css">
 			body{
 				margin: 40px;
-				font-size: 16px;
+				font-size: 18px;
+				background-color:lightgrey;
 			}
 			/*.titleFont{font-size:24px;}*/
 			.menu{
@@ -27,33 +28,34 @@
 				padding: 5px 10px;
 			}
 			.menu a{ color: white;
-				padding: 0px 10px;}
-			
+				padding: 0px 10px;
+			}
 			h2{
 				background-color: rgb(240,130,60);
 				color: white;
 				border: 2px;
+				border-radius: 4px;
+				padding: 2px 5px;
 			}
-			
+			li a{
+				font-size: 20px
+			}
 	</style>
 
 </head>
-<body style="background-color:lightgrey;">
+<body>
 <div class="col-md-4">
 	<a name="Home"></a>
 	<img  width="100%" src="profile.jpg">
-	<h1>Yulin Shi</h1>
-	<p>Master of mechanical engineering</p>
-	<p>McGill University</p>
+	<div style="    text-align: center;">
+		<h1>Yulin Shi</h1>
+		<p>Master of mechanical engineering</p>
+		<p>McGill University</p>
+	</div>
 	<hr><!-- ========================================================================================== -->
 	<h2>Summary</h2>
-	<ul>
-		<li>I had two years of research and project experiences in aircraft engine systems modelling and controllers design in Beijing. I'm now working in structure dynamics and numerical computing researches.
-		</li>
-		<li>Graduating from my master's program in mechanical engineering at McGill University in May 2016, I'm looking for a position of simulation engineer.
-		</li>
-		
-	</ul>
+	<p>I had two years of research and project experiences in aircraft engine systems modelling and controllers design in Beijing. I'm now doing structure dynamics and numerical computing researches.
+	</p>
 	<hr><!-- ========================================================================================== -->
 	<h2>Skills</h2>
 	<ul>
@@ -66,21 +68,21 @@
 	<hr><!-- ========================================================================================== -->
 	<h2>Check-ins</h2>
 	<ul>
-	    <li><a style="font-size:18px" href="personal/california_2015/">Visit to California [gallery]</a>
+	    <li><a href="personal/california_2015/">Visit to California [gallery]</a>
 	    </li>
 	    <p>California, May 2015<p>
-		<li><a style="font-size:18px" href="personal/tokyo_museum/">Exchange Student in Tsukuba University, Tokyo [gallery]</a>
+		<li><a href="personal/tokyo_museum/">Exchange Student [gallery]</a>
 	    </li>
-	    <p>Tokyo, Sep-Nov 2012<p>
+	    <p>Tsukuba University, Sep-Nov 2012<p>
 	</ul>
 	<hr><!-- ========================================================================================== -->
 	<h2>Useful Links</h2>
 	<ul>
-	    <li><a style="font-size:18px" href="http://structdynviblab.mcgill.ca">Structure Dynamics and Vibration Lab</a>
+	    <li><a href="http://structdynviblab.mcgill.ca">Structure Dynamics and Vibration Lab</a>
 	    </li>
-	    <li><a style="font-size:18px" href="https://www.linkedin.com/in/yulin-shi-53ba495a">LinkedIn</a>
+	    <li><a href="https://www.linkedin.com/in/yulin-shi-53ba495a">LinkedIn</a>
 	    </li>
-	    <li><a style="font-size:18px" href="http://yulin2013.blogspot.ca">Blogger</a>
+	    <li><a href="http://yulin2013.blogspot.ca">Blogger</a>
 	    </li>
 	    
 	</ul>
@@ -91,14 +93,13 @@
 	<a name="News"></a>
 	<h2>News</h2>
 	<ul>
-		<li><p>1 Jan 2015</p>
-			<p>Send thank-you letter to my beloved friends</p>
+		<li>01 Jan 2015: send thank-you letters to my beloved friends
 		</li>
-		<li><p>29 Dec 2015</p>
-			<p>Write the conference paper</p>
+		<li>29 Dec 2015: write the conference paper
 		</li>
-		<li><p>27 Dec 2015</p>
-			<p>The harmonic balance method works for contact problem in Lipschitz continuous mapping. The Matlab project is also completed.</p>
+		<li>27 Dec 2015: the harmonic balance method works for contact problem in Lipschitz continuous mapping. The Matlab project is also completed.
+		</li>
+		<li>26 Dec 2015: explain how does contact problems fit into mathematical programming framework.
 		</li>
 	</ul>
 	<hr><!-- ========================================================================================== -->
@@ -107,21 +108,19 @@
 		<h2>Researches</h2>
     
 	<ul>
-	    <li><a style="font-size:18px" href="research/hbm_semismooth/HBM_semismooth.pdf">Harmonic Balance Method for Contact Problem in Lipschitz Continuous Form [pdf]</a>
+	    <li><a href="research/hbm_semismooth/HBM_semismooth.pdf">Harmonic Balance Method for Contact Problem in Lipschitz Continuous Form [pdf]</a>
 		    <p>McGill University, Dec 2015</p>
 		    <p><b>Abstract</b>: This is the project of unifying the time-discretization and Fourier discretization onto solving the periodic harmonic forcing response problem. 		This unified approach is applicable for contact problem in Lagrangian form, penalty form and augmented Lagrangian form. It is also validated on single-point contact and multi-point contact benchmarks.</p>
 	    </li>
-		<li><a style="font-size:18px" href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7058493">Shi, Yulin, et al. "Constructive non-iterative explicit models of turbofan engines with introduced poles." <i>Applied Sciences and Technology (IBCAST)</i>, 2015 12th International Bhurban Conference on. IEEE, 2015.</a>
-			<p>Beihang University, Aug 2014</p>
+		<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7058493">Constructive non-iterative explicit models of turbofan engines with introduced poles</a>
+			<p>12th International Bhurban Conference on. IEEE, 2015</p>
 		    <p><b>Abstract</b>: nonlinear implicit constraint equations and differential dynamic functions are the most accurate
 			descriptions of open-loop model of turbofan engines.
 			However, it's time-consuming to iterate the implicit
 			constraint equations during time-domain simulation. In
 			some literatures, those implicit constraint equations between
 			components are replaced by explicit dynamic functions of
-			volumes between components. However, there is no evidence
-			to support the feasibility of the replacement, and solution of the volume dynamic model can diverge during large step
-			simulation.</p>
+			volumes between components. Dynamics of the ode model is redesigned using pole relocation method, which increases simulation speed while retained the accuracy.ß</p>
 	    </li>
 	</ul>
 	<hr><!-- ========================================================================================== -->
@@ -134,15 +133,7 @@
 	    <a style="font-size:18px" href="http://julianshi.github.io/flappyBird/"> Flappy Bird Game [html]
 	    </a>
 	    	<p>COMP 599. Dec 2015</p>
-	    	<p><b>Abstract</b>: For the flappy bird game, a typical delay control
-			problem, we propose using the reinforcement learning
-			algorithms to learn the control policy. Specifically, we
-			use the Bellman equation to propagate the end-point
-			reward to the entire state space; use model free Qfunction
-			to search optimal policy; and, to deal with
-			the curse of dimension, use the neural network to
-			parametrise the approximate function of the optimal
-			controller. The Flappy Bird environment is developed
+	    	<p><b>Abstract</b>: The Flappy Bird environment is developed
 			in the JavaScript. The open source machine learning
 			library Convnetjs is included to train the neural network.
 			It is validated that the neural network Q-learning
