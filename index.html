@@ -46,71 +46,102 @@
 <body>
 <div class="col-md-4">
 	<a name="Home"></a>
-	<img  width="100%" src="profile.jpg">
+	<a href="http://julianshi.github.io/personal/">
+		<img  width="100%" src="profile.jpg">
+	</a>
 	<div style="    text-align: center;">
 		<h1>Yulin Shi</h1>
 		<p>Master of mechanical engineering</p>
 		<p>McGill University</p>
 	</div>
-	<hr><!-- ========================================================================================== -->
-	<h2>Summary</h2>
-	<p>I had two years of research and project experiences in aircraft engine systems modelling and controllers design in Beijing. I'm now doing structure dynamics and numerical computing researches.
+	<!-- ==================================================================== -->
+	<h2>Summary <a href="/home/yshi/Documents/Git/public/assets/cv/CV.pdf">[CV]</a></h2>
+	<p>I'd like to devote my two-year of aircraft system simulation and control experience and two-year of FEA algorithm research experience to industry.
 	</p>
-	<hr><!-- ========================================================================================== -->
+	<!-- ==================================================================== -->
 	<h2>Skills</h2>
 	<ul>
-		<li> <b>Programming</b>: Matlab/Simulink, Java, Python, C/C++, FreeFem++ 
+		<li> <b>Programming</b>: C/C++, Matlab/Simulink, Java, Python, Html, Fortran
 		</li>
-		<li><b>Software</b>: Latex, Eclipse, Robot Operating System, Linux Mint, Ubuntu, OSX
+		<li> <b>Libraries</b>: FreeFem++, <a href="http://wiki.ros.org"> ROS</a>, <a href="gazebosim.org/tutorials"> Gazebo</a>, GSL
 		</li>
-		<li><b>Interest</b>: swimming, scientific fiction writing, Chinese painting
-	</ul>
-	<hr><!-- ========================================================================================== -->
+		<li><b>Software</b>: Latex, XCode, Eclipse, MS Office
+		</li>
+		<li><b>OS</b>: Linux Mint, Ubuntu, OSX, Windows
+		</li>
+		</ul>
+	<!-- ==================================================================== -->
 	<h2>Check-ins</h2>
 	<ul>
-	    <li><a href="personal/california_2015/">Visit to California [gallery]</a>
-	    </li>
-	    <p>California, May 2015<p>
-		<li><a href="personal/tokyo_museum/">Exchange Student [gallery]</a>
+    <a href="personal/california_2015/">
+    	<li >
+		    Visit to California [gallery]
+		    <p>California, May 2015<p>
+    	</li>
+    </a>
+    <a href="personal/tokyo_museum/">
+		<li>
+			Exchange Student [gallery]
 	    </li>
 	    <p>Tsukuba University, Sep-Nov 2012<p>
+    </a>
 	</ul>
-	<hr><!-- ========================================================================================== -->
+	<!-- ==================================================================== -->
 	<h2>Useful Links</h2>
 	<ul>
-	    <li><a href="http://structdynviblab.mcgill.ca">Structure Dynamics and Vibration Lab</a>
-	    </li>
-	    <li><a href="https://www.linkedin.com/in/yulin-shi-53ba495a">LinkedIn</a>
-	    </li>
-	    <li><a href="http://yulin2013.blogspot.ca">Blogger</a>
-	    </li>
-	    
+	<a href="http://structdynviblab.mcgill.ca/members.html">
+	<li>
+		Structural Dynamics and Vibration Lab
+    </li>
+    </a>
+    <a href="https://www.linkedin.com/in/yulin-shi-53ba495a">
+	<li>
+		LinkedIn
+	</li>
+	<a href="http://yulin2013.blogspot.ca">
+	<li>
+		Blogger
+    </li>
+    </a>
 	</ul>
-	
 </div>
 <div class="col-md-8">
-	<hr><!-- ========================================================================================== -->
+	<!-- ==================================================================== -->
 	<a name="News"></a>
 	<h2>News</h2>
 	<ul>
-		<li>22 Jan 2016: deadline of the <a href="http://www.ictam2016.org/welcome_e.shtml">ICTAM</a>
+		<li>
+			7 Feb 2016: Use continuation method to solve periodic solution for nonlinear systems.
+		<li>
+			5 Feb 2016: Done with the frictional contact software project (in C++ and Matlab) using Semismooth Newton method.
 		</li>
-		<li>21 Jan 2016: MIAE poster day. Trottier 2 pm to 5 pm. 
+		<li>
+			22 Jan 2016: deadline of the <a href="http://www.ictam2016.org/welcome_e.shtml">ICTAM</a>
 		</li>
-		<li>27 Dec 2015: the harmonic balance method works for contact problem in Lipschitz continuous mapping. The Matlab project is also completed.
+		<li>
+			21 Jan 2016: MIAE poster day. Trottier 2 pm to 5 pm. 
 		</li>
-		<li>26 Dec 2015: explain how does contact problems fit into mathematical programming framework.
+		<li>
+			27 Dec 2015: the harmonic balance method works for contact problem in Lipschitz continuous mapping. The Matlab project is also completed.
+		</li>
+		<li>
+			26 Dec 2015: explain how does contact problems fit into mathematical programming framework.
 		</li>
 	</ul>
-	<hr><!-- ========================================================================================== -->
-	<a name="Research"></a>
-	
-		<h2>Researches</h2>
-    
+	<!-- ==================================================================== -->
+	<a name="Publications"></a>
+	<h2>Publications</h2>
 	<ul>
-	    <li><a href="research/hbm_semismooth/HBM_semismooth.pdf">Harmonic Balance Method for Contact Problem in Lipschitz Continuous Form [pdf]</a>
-		    <p>McGill University, Dec 2015</p>
-		    <p><b>Abstract</b>: This is the project of unifying the time-discretization and Fourier discretization onto solving the periodic harmonic forcing response problem. 		This unified approach is applicable for contact problem in Lagrangian form, penalty form and augmented Lagrangian form. It is also validated on single-point contact and multi-point contact benchmarks.</p>
+	    <li>semismooth newton solver for periodically-forced solutions to a unilateral contact formulation 
+		    <p>ICTAM Aug, 2016</p>
+		    <p><b>Abstract</b>: The vibratory response of a periodically-forced generic mechanical system undergoing a unilateral contact condition is addressed.
+			The unilateral contact constraint is reformulated as a nonsmooth Lipschitz continuous function. This allows the use of the so-called
+			semismooth Newton method capable of solving the equations governing the dynamics and the unilateral contact constraints simultaneously.
+			The assumed periodic solution and the contact force are approximated by truncated Fourier series before being incorporated in the solver
+			after projection of the equations on the Fourier basis. Continuation of the solution harmonics with respect to the forcing frequency is
+			performed. For a medium size system of 20 degrees-of-freedom, it it shown that convergence is achieved by comparing with the "reference"
+			time-marching solution.
+			</p>
 	    </li>
 		<li><a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7058493">Constructive non-iterative explicit models of turbofan engines with introduced poles</a>
 			<p>12th International Bhurban Conference on. IEEE, 2015</p>
@@ -123,50 +154,66 @@
 			volumes between components. Dynamics of the ode model is redesigned using pole relocation method, which increases simulation speed while retained the accuracy.</p>
 	    </li>
 	</ul>
-	<hr><!-- ========================================================================================== -->
-	<a name="Project"></a>
+
+	<!-- ==================================================================== -->
+	<a name="Researches"></a>
+	<h2>Researches</h2>
+	<ul>
+	<li> 
+		<a style="font-size:18px"  href="project/periodic_contact/periodic_contact.pdf">Semismooth newton method for dynamic contact problem under periodic forcing [pdf]
+    	</a>
+    	<p>Structural Dynamics and Vibration Lab, Jan 2016</p>
+    	<p>Fouier function approximation solutions (<font color="blue">&#x26AA;</font>), Time-marching solutions (<font color="red">&#x26AA;</font>), The upper boundary (<font color="yellow">&#x268A;</font>)</p>
+    	<img  width="45%" src="project/periodic_contact/periodic_contact_rectangle.gif">
+    </li>
+    <li> 
+    	<a style="font-size:18px" href="project/static_contact/semismooth_newton_method_for_static_contact_problem.pdf">Semismooth Newton Method for Static Contact Problem [pdf]
+    	</a>
+    	<p>MECH 546, April 2015</p>
+    </li>
+    <li>
+    	<a style="font-size:18px">Semismooth Newton Method for Dynamic Contact Problem 
+    	</a>
+    	<br>Structure Dynamics and Vibration Lab, Aug 2015
+    	<img  width="45%" src="project/dynamic_contact/contNewm2D23sigmaVm.gif">
+    </li>
+    </ul>
+	<!-- ==================================================================== -->
+	<a name="Projects"></a>
 	<h2>Projects </h2>
 	<ul>
-		<li> <a style="font-size:18px"  href="project/periodic_contact/periodic_contact.pdf">Semismooth Newton Method for Dynamic Contact Problem [pdf]
-	    </a>
-	    <p>Structure Dynamics and Vibration Lab, Jan 2016</p>
-	    <p>Fouier function approximation solutions (<font color="blue">&#x26AA;</font>), Time-marching solutions (<font color="red">&#x26AA;</font>), The upper boundary (<font color="yellow">&#x268A;</font>)</p>
-	    <img  width="50%" src="project/periodic_contact/periodic_contact_rectangle.gif">
-	    </li>
-	    <li> <a style="font-size:18px" href="project/reinforcement_learning/Combining_Q-Learning_with_Artificial_Neural_Networks_in_Flappy_Bird.pdf">Combining Q-Learning with Artificial Neural Networks in Flappy Bird [pdf]
-	    </a>
-	    <br>
+	<li> 
+    	<a style="font-size:18px" href="project/rotor_casing_contact/Periodic_Solutions_of_Rotor-Casing_Contact_Using_Harmonic_Balance_Method.pdf">Periodic Solutions of Rotor-Casing Contact Using Harmonic Balance Method [pdf]
+    	</a>
+    	<p>MECH 501, Dec 2015</p>
+    </li>
+    <li> 
+    	<a style="font-size:18px" href="project/reinforcement_learning/Combining_Q-Learning_with_Artificial_Neural_Networks_in_Flappy_Bird.pdf">Combining Q-Learning with Artificial Neural Networks in Flappy Bird [pdf]
+    	</a>
+    	<br>
 	    <a style="font-size:18px" href="http://julianshi.github.io/flappyBird/"> Flappy Bird Game [html]
-	    </a>
-	    	<p>COMP 599. Dec 2015</p>
-	    	<p><b>Abstract</b>: The Flappy Bird environment is developed
-			in the JavaScript. The open source machine learning
-			library Convnetjs is included to train the neural network.
-			It is validated that the neural network Q-learning
-			is proper for the learning problem. It is also observed
-			that some strategies emerged after training the simple
-			neural network.<p>
-	    </li>
-	    <li> <a style="font-size:18px" href="project/rotor_casing_contact/Periodic_Solutions_of_Rotor-Casing_Contact_Using_Harmonic_Balance_Method.pdf">Periodic Solutions of Rotor-Casing Contact Using Harmonic Balance Method [pdf]
-	    </a>
-	    <p>MECH 501, Dec 2015</p>
-	    <li> <a style="font-size:18px" href="project/static_contact/semismooth_newton_method_for_static_contact_problem.pdf">Semismooth Newton Method for Static Contact Problem [pdf]
-	    </a>
-	    <p>MECH 546, April 2015</p>
-	    <li> <a style="font-size:18px">Semismooth Newton Method for Dynamic Contact Problem 
-	    </a>
-	    <p>Structure Dynamics and Vibration Lab, Aug 2015</p>
-	    </li>
-	    </li>
-	    <li> <a style="font-size:18px" href="project/bellman_equation/markov_decision_process.pdf">Waiting Room Problem as an Markov Decision Process [pdf]
-	    </a>
-	    <p>ECSE 526, April 2015</p>
-	    </li>
-	    
+    	</a>
+    	<br>COMP 599. Dec 2015
+    	<br><b>Abstract</b>: The Flappy Bird environment is developed
+		in the JavaScript. The open source machine learning
+		library Convnetjs is included to train the neural network.
+		It is validated that the neural network Q-learning
+		is proper for the learning problem. It is also observed
+		that some strategies emerged after training the simple
+		neural network.
+    </li>
+    <li> 
+    	<a style="font-size:18px" href="project/bellman_equation/markov_decision_process.pdf">Waiting Room Problem as an Markov Decision Process [pdf]
+    	</a>
+    	<p>ECSE 526, April 2015</p>
+    </li>
+	<li> Chess AI agent using search tree (in Java)
+	    <br>ECSE 526, April 2015
+    </li>
 	</ul>
-	<hr><!-- ========================================================================================== -->
-	<a name="Work"></a>
-	
+
+	<!-- ==================================================================== -->
+	<a name="Works"></a>
 	<h2>Works</h2>
 	<ul>
 	    <li> <a style="font-size:18px">Simulation engineer, McGill Robotics </a>
@@ -176,25 +223,25 @@
 	    </li>
 	</ul>
 
-	<hr><!-- ========================================================================================== -->
+	<!-- ==================================================================== -->
 	<a name="Interests"></a>
-	
 	<h2>Interests</h2>
 	<ul>
 	    <li> <a style="font-size:18px">Unmanned Aerial Vehicle project </a>
 	    	<p>Frame, APM, firmwares are all bought from the robot shop. We assembled them together:)</p>
 	    </li>
 	</ul>
-	<hr><!-- ========================================================================================== -->
+	<!-- ==================================================================== -->
 	
 </div>
 
 <div class="menu">
 <a href="#Home">Home</a>
 <a href="#News">News</a>
-<a href="#Research">Researches</a>
-<a href="#Project">Projects</a>
-<a href="#Work">Works</a>
+<a href="#Publications">Publications</a>
+<a href="#Researches">Researches</a>
+<a href="#Projects">Projects</a>
+<a href="#Works">Works</a>
 <a href="#Interests">Interests</a>
 
 
