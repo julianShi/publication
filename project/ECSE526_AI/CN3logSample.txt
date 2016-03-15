@@ -1,0 +1,85 @@
+//Initial game board: white player use piece 1, 2, 3, 4; 
+while black player use piece -1, -2, -3, -4;
+  1  0  0  0 -1
+ -2  0  0  0  2
+  3  0  0  0 -3
+ -4  0  0  0  4
+please type id and dir
+1
+2
+Computer moves -2 towards 2 achieving utility -1
+Total nodes evaluated is 1999707
+The depth reached is 11
+Excution time: 1552
+  0  1  0  0 -1
+  0 -2  0  0  2
+  3  0  0  0 -3
+ -4  0  0  0  4
+please type id and dir
+4
+4
+Computer moves -3 towards 4 achieving utility -11
+Total nodes evaluated is 4899569
+The depth reached is 11
+Excution time: 3723
+  0  1  0  0 -1
+  0 -2  0  0  2
+  3  0  0 -3  0
+ -4  0  0  4  0
+please type id and dir
+2
+4
+Computer moves -2 towards 2 achieving utility -11
+Total nodes evaluated is 7362921
+The depth reached is 11
+Excution time: 5583
+  0  1  0  0 -1
+  0  0 -2  2  0
+  3  0  0 -3  0
+ -4  0  0  4  0
+please type id and dir
+3
+2
+Computer moves -3 towards 4 achieving utility -11
+Total nodes evaluated is 4386747
+The depth reached is 11
+Excution time: 3233
+  0  1  0  0 -1
+  0  0 -2  2  0
+  0  3 -3  0  0
+ -4  0  0  4  0
+please type id and dir
+1
+2
+Computer moves -4 towards 2 achieving utility -12
+Total nodes evaluated is 7715974
+The depth reached is 11
+Excution time: 5832
+  0  0  1  0 -1
+  0  0 -2  2  0
+  0  3 -3  0  0
+  0 -4  0  4  0
+please type id and dir
+4
+4
+Computer moves -1 towards 4 achieving utility -15
+Total nodes evaluated is 991218
+The depth reached is 11
+Excution time: 774
+  0  0  1 -1  0
+  0  0 -2  2  0
+  0  3 -3  0  0
+  0 -4  4  0  0
+please type id and dir
+1
+4
+Computer moves -1 towards 4 achieving utility -18
+Total nodes evaluated is 224108
+The depth reached is 11
+Excution time: 159
+black (computer) win
+  0  1 -1  0  0
+  0  0 -2  2  0
+  0  3 -3  0  0
+  0 -4  4  0  0
+everage search time is: 4139
