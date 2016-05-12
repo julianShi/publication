@@ -1,0 +1,34 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{mtpro2}
+\usetikzlibrary{calc,patterns,decorations.pathmorphing,decorations.markings}
+
+\begin{document}
+\begin{tikzpicture}
+\coordinate (x3) at (2,1);
+\coordinate (x30) at (2,0);
+\draw[fill] (x3) circle (.05) node[right]{$u_3$ ?};
+\draw[fill] (x30) circle (.05) node[right]{$u_3^0$};
+\begin{scope}[rotate=45]
+% -- define nodes
+\coordinate (x1) at (-2,1);
+\coordinate (x2) at (0,0);
+\coordinate (x20) at (-.5,-.5);
+\draw[fill] (x1) circle (.05) node[above]{$u_1$};
+\draw[fill] (x2) circle (.05) node[above]{$u_2$};
+\draw[fill] (x20) circle (.05) node[right]{$ u_2^0$};
+% -- draw curve
+\draw [smooth,samples=20,domain=-2.5:2.5] plot(\x,{\x*\x/4});
+% -- draw lines
+\draw [->] (x1)-- node[below]{$\Delta w$} (x20) ;
+\draw [dashed] (x20)-- (x2) ;
+\draw [->] (x1)-- node[below]{$\Delta w$} (x20) ;
+\draw [dashed] (x20)-- (x2) ;
+\end{scope}
+\draw [->] (x2)-- node[below]{$\Delta w$} (x30) ;
+\draw [dashed] (x30)-- (x3) ;
+% -- draw coordinates
+\draw [->] (-3,-2)-- ++(6,0) node[right]{$w$} ;
+\draw [->] (-3,-2)-- ++(0,5) node[above]{$u$} ;
+\end{tikzpicture}
+\end{document}
