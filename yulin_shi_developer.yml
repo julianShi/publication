@@ -12,8 +12,8 @@ PROFESSIONAL EXPERIENCES:
     - TITLE: Software Developer
       EMPLOYER: IBM
       LOCATION: Toronto, Canada 
-      START TIME: 2018-07-01
-      END TIME: NOW
+      START DATE: 2018-07-01
+      END DATE: NOW
       TASKS: 
         - Speed up the database engine runtime by optimizing memory buffer formatting in C/C++. 
         - Wrote a Java JDBC client to support multiple connections to DB2 database. This app allows generating concurrent SQL queries. It is easily configurable using manifest files. 
@@ -23,8 +23,8 @@ PROFESSIONAL EXPERIENCES:
     - TITLE: Software QA & Automation Developer
       EMPLOYER: Imagine Communications
       LOCATION: Toronto, Canada 
-      START TIME: 2016-11-01
-      END TIME: 2018-07-01
+      START DATE: 2016-11-01
+      END DATE: 2018-07-01
       TASKS: 
         - Independently developed a Selenium-based UI testing solution for 300 test case of an AngularJS web app 
         - Developed object-oriented Python libraries of REST requests, authentication, network protocol, multicast stream- ing and MySQL query 
@@ -34,25 +34,25 @@ PROFESSIONAL EXPERIENCES:
 EDUCATION:
     - DEGREE: Master of Mechanical Engineering (Thesis)
       SCHOOL: McGill University
-      START TIME: 2014-09-01
-      END TIME: 2016-11-01
+      START DATE: 2014-09-01
+      END DATE: 2016-11-01
       TASKS: 
         - Designed a numerical continuation algorithm for the modal analysis of contact dynamics as a nonlinear programming 
         - Developed contact dynamics simulation and visualization project based on FreeFEM (C++) 
       PUBLICATION: Semismooth Newton solver for periodically-forced solutions to a unilateral contact formulation, 24th International Congress of Theoretical and Applied Mechanics, 2016 
     - DEGREE: Bachelor of Aerospace Engineering
       SCHOOL: McGill University
-      START TIME: 2009-09-01
-      END TIME: 2013-07-01
+      START DATE: 2009-09-01
+      END DATE: 2013-07-01
       PUBLICATION: Constructive non-iterative explicit models of turbofan engines with introduced poles, IEEE, 2014 
 
 PROJECTS: 
     - NAME: Chatbot 
-      END TIME: 2018-01-01 
+      END DATE: 2018-01-01 
       TASKS:
         - Designed the user interface and workflow of the chatbot on Facebook Messenger in supporting multiple users 
         - Made an http server on AWS EC2 for sending the crawled texts and images per chatbot request 
     - NAME: Driving Behavior Cloning, Udacity
-      END TIME: 2018-01-01
+      END DATE: 2018-01-01
         - Built the vision to steering convolutional neural network in Keras for the vehicle control in a simulator 
         - Refining the neural network architecture whiling retaining pretrained knowledge using transfer learning method 
