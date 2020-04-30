@@ -4,7 +4,7 @@ CANDIDATE:
     ADDRESS: Toronto, ON
 
 SKILLS:
-    DOMAIN: database, computer network and QA automation 
+    DOMAIN: database, computer network, and QA automation 
     LANGUAGE: Python, Java, C/C++, Shell, SQL, JavaScript, and Perl 
     TOOL: Linux, Git, Docker, Jenkins, AWS EC2, Tensorflow, GDB
 
@@ -16,10 +16,10 @@ PROFESSIONAL EXPERIENCES:
       END DATE: NOW
       TASKS: 
         - Speed up the database engine runtime by optimizing memory buffer formatting in C/C++. 
-        - Wrote a Java JDBC client to support multiple connections to DB2 database. This app allows generating concurrent SQL queries. It is easily configurable using manifest files. 
+        - Wrote a Java JDBC client to support multiple connections to the DB2 database. This app allows for generating concurrent SQL queries. It is easily configurable using manifest files. 
         - Provided a Docker, Jenkins, git, and NFS solution to move the team from a monolithic development environment to an agile development-test-deployment CI/CD pipeline. Made a synchronization solution for distributed artifact servers. 
-        - Speeded up code control, by using git large file system (gls). Use docker mount to for logs management. 
-        - Wrote Perl script for database end-to-end testing, including security, data ingestion, backup and restore etc. 
+        - Speeded up code control, by using git large file system. Use docker mount to for logs management. 
+        - Wrote Perl script for database end-to-end testing, including security, data ingestion, backup and restore, etc. 
     - TITLE: Software QA & Automation Developer
       EMPLOYER: Imagine Communications
       LOCATION: Toronto, Canada 
@@ -27,8 +27,8 @@ PROFESSIONAL EXPERIENCES:
       END DATE: 2018-07-01
       TASKS: 
         - Independently developed a Selenium-based UI testing solution for 300 test case of an AngularJS web app 
-        - Developed object-oriented Python libraries of REST requests, authentication, network protocol, multicast stream- ing and MySQL query 
-        - Design and operation of a scalable private cloud infrastructure for network testing 
+        - Developed object-oriented Python libraries of REST requests, authentication, network protocol, multicast streaming, and MySQL query 
+        - Design and operation of scalable private cloud infrastructure for network testing 
         - Using the JIRA, GIT, internal forums and Scrum meetings to enforce agile development 
 
 EDUCATION:
@@ -51,8 +51,8 @@ PROJECTS:
       END DATE: 2018-01-01 
       TASKS:
         - Designed the user interface and workflow of the chatbot on Facebook Messenger in supporting multiple users 
-        - Made an http server on AWS EC2 for sending the crawled texts and images per chatbot request 
+        - Made an HTTP server on AWS EC2 for sending the crawled texts and images per chatbot request 
     - NAME: Driving Behavior Cloning, Udacity
       END DATE: 2018-01-01
         - Built the vision to steering convolutional neural network in Keras for the vehicle control in a simulator 
-        - Refining the neural network architecture whiling retaining pretrained knowledge using transfer learning method 
+        - Refining the neural network architecture whiling retaining trained knowledge using the transfer learning method 
