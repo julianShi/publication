@@ -1,0 +1,599 @@
+<!doctype html>
+<html style='font-size:13px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style><title>遗憾</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='心脏科'><span>心脏科</span></h1><p><span>“你还有什么遗憾吗？” 外科医生问我，在我签字同意心脏移植手术的时候。</span></p><p><span>“您还负责心理治疗？” 我纳闷了。我需要外科手术，我并不觉得自己有心理问题。</span></p><p><span>我已经81岁了。21世纪是生物的世界。在21世纪下半叶，医疗技术高度发展。为有心脏病的老年人，换一颗人造心脏，并非难事。但是这项技术的社会影响巨大。因为普罗米修斯再一次盗取了天火--长寿。在过去，癌症+死亡对所有人是公平的，无论贫穷富有，所有人都会在80岁左右去 天堂报到。但是现在人类第一次有了掌握自己寿命的能力。经济资源因此大规模向医疗领域倾斜。还好我在一个福利国家纳税养老。通过更换人工心脏，来延缓衰老，可以由全民医疗来买单。</span></p><p><span>外科医生解释道：”没有外科手术能保证万无一失。所以我例行公事地建议你。最好了结此生遗憾。并写一份遗嘱。“</span></p><h1 id='遗憾'><span>遗憾</span></h1><p><span>遵循医生的建议，我推迟了一周签署手术协议。</span></p><p><span>我此生还是有遗憾的。我的儿子在5岁的时候，因为心脏病，过早离世。我不忍心看他痛苦，用药物维持后半生，于是和他约定，放弃治疗，享受生命最后的时光。但是 他是我的心头肉呀，上帝怎么忍心把他带走？我好几年才从悲痛中慢慢恢复。</span></p><p><span>这几年，医疗迅速发展，不久，置换人工心脏，获得寿命延长，已经商业化。就是活得越久，医疗就越发达，越能够延长人的寿命，直到下一次医疗进步，第二次延长人类寿命，如此循环。医疗有技术奇点 </span><a href='https://baike.baidu.com/item/%E6%8A%80%E6%9C%AF%E5%A5%87%E5%BC%82%E7%82%B9/8250389'><span>Technology Singularity</span></a><span> ，说不定，到某个临界点，人类还能永生。</span></p><p><span>这是人类的喜事，却让我无比懊恼，痛苦。因为，如果当时选择治疗，我儿子能活下来，还能等待医疗进步，解除药物魔咒。是我当时太短视了。没有听说过技术奇点。不知道，只要活着，就有希望。我一生都因此懊恼，这次外科医生又揭开了我心灵伤疤。</span></p><p><span>还有一个遗憾，如果这次手术失败，我是没办法看到大一统理论 </span><a href='https://baike.baidu.com/item/%E5%A4%A7%E7%BB%9F%E4%B8%80%E7%90%86%E8%AE%BA/98421'><span>Grand Unified Theory, the theory of everything</span></a><span> 成功的。大一统理论，是爱因斯坦时期，就提出来，用来解释宇宙4大力学的终极理论。一个世纪过去了，千千万万的数学家，物理学家前赴后继，却无人能解。我虽然没智慧参与，贡献一份力量，但是我教书育人的一生，都在为科学家摇旗呐喊。我于是找到了我一个研究天体物理的朋友，闲聊八卦一下大一统理论的前沿成果。如果有进展，我也死而无憾了。所谓，朝闻道，夕死可矣。</span></p><h1 id='天文馆'><span>天文馆</span></h1><p><span>我驱车200公里，来到郊外的天文台找这位朋友。朋友为我准备了美酒佳肴。谈笑间，斗转星移，已是半夜。没有城市灯光污染，这里满天繁星。像一双双眼睛，用千万年亘古不变的宁静，来注视人世间的纷纷扰扰。我感叹到“为什么古人说，人在做，天在看。是因为他们真真切切 看见了这一双双眼睛。相反，现代人，蜗居于城市钢筋混凝土之中，用文明的灯光，遮盖住天上的眼睛，行苟且之事。掩耳盗铃，就以为可以瞒天过海。”</span></p><p><span>朋友笑话我：“浊者自浊，清者自清。你都八十好几的人了，还这么愤青。今天我们只聊风月，不谈国是。“朋友顿了顿，“其实，大一统理论这几年有进展。我们观测到了平行宇宙的一些东西”。</span></p><p><span>我听到这里，马上竖起来耳朵。这正是我此行来的目的。“洗耳恭听！”</span></p><p><span>朋友说：“你知道，宇宙大爆炸刚开始的时候，经历了暴涨阶段 </span><a href='https://baike.baidu.com/item/%E6%9A%B4%E6%B6%A8'><span>Inflation</span></a><span>，比光还快。之后才是匀速的宇宙膨胀。但是因为暴涨，整个宇宙被分割成了一块一块子宇宙。遥远的星系以超光速远离我们，所以我们永远看不到那些星系。我们能看到的，只有10的80次方分之一，叫做可观测宇宙 </span><a href='https://baike.baidu.com/item/%E5%93%88%E5%8B%83%E4%BD%93%E7%A7%AF'><span>Observable Universe</span></a><span>。</span><u><span>这就好像说，地球是一个橡胶气球，被越吹越大，只要地球一直膨胀下去，太平洋东岸的海啸，就永远传播不到太平洋西岸的中国</span></u><span>。 正是如此，有一些反物质组成的子宇宙，才没有和正物质组成的子宇宙碰撞湮灭 </span><a href='https://baike.baidu.com/item/%E6%B9%AE%E7%81%AD/720344'><span>annuallation</span></a><span>。”</span></p><p><span>我打断朋友，我说：”我知道呀，这是半个世纪之前的常识“。</span></p><p><span>“你知道就好，就简单了”。朋友继续说：“不一样的是，最近我们观测到了正反子宇宙碰撞导致的湮灭。半个世纪之前，在宇宙微波背景辐射 </span><a href='https://baike.baidu.com/item/%E8%83%8C%E6%99%AF%E8%BE%90%E5%B0%84'><span>Background Microwave Radiation</span></a><span> 里，我们观测到了不均匀的 </span><a href='https://baike.baidu.com/item/WMAP%E5%86%B7%E6%96%91%E7%82%B9/10404216'><span>暗斑</span></a><span>。当时我们怀疑是暗物质 </span><a href='https://baike.baidu.com/item/%E6%9A%97%E7%89%A9%E8%B4%A8/8666'><span>dark matter</span></a><span> 不发光。但是最近我们通过在太阳系边缘 30个天文单位远的柯伊伯带Kuiper belt 部署的引力探测器，确定了，那一小块区域的确没有物质。一个简单合理的解释是。在那附近，宇宙膨胀减弱了。我们的可观测宇宙，和临近某个反物质宇宙碰撞，导致了物质湮灭。“</span></p><p><span>朋友没有顾及我惊讶的表情，继续说，”这次湮灭摧毁了多少星系，多少文明，我作为地球的科学家不关心，但是很重要的一点是，这证明了大一统理论预言的 平行宇宙，第一次有了观测证据。这些研究最近在学术界很活跃，但是公众的注意力都在医疗永生上面，所以没关注天文。我说，你们再永生，能比宇宙寿命长吗？我觉得，我研究宇宙的这一辈子，已经和漫长的宇宙融为一体了，我不仅仅是我的肉身，我的个体，我是宇宙的自我觉醒，自我观察，自我反思。</span><u><span>我作为宇宙的耳目手足，用150亿年的时间去孕育，用100年的时间去绽放，再用将来无边无际的时间去死亡</span></u><span>。”</span></p><p><span>我心跳开始加速起来。我问朋友，“</span><strong><span>那你说，平行宇宙，会不会有另外一个我，做了另外一个选择？我能不能到坐时光机回到过去</span></strong><span>？”</span></p><p><span>朋友回答：“</span></p><ul><li><span>第一，时光机是不可能的。那会违反因果律。</span></li><li><span>第二，其实站在时间维度之上，你会发现，一切都是注定的。</span><u><span>就像翻一本书一样，书已经写好了。只是你从不同的页数开始翻，你从不同的角色开始代入，你会有不一样的体验</span></u><span>。根据大一统理论，第5维是一本包括了你所有选择的书，第6维是一本包括了你所有开端的书，第7维是包括了所有剧情设定的书，直到第11维，是所有书的书。你没办法修改书上的文字。但是你有办法选择翻开那本书，做何种选择，获得何种体验。</span></li><li><span>第三，你虽然不能坐时光机回到过去。但是如果你有办法成为平行宇宙的另外一个你，还是50年前的那个你，那你就有机会重新选择了。”</span></li></ul><p><span>我似乎明白了什么。我说，“我要重新来过一遍，不留遗憾。”</span></p><p><span>朋友说。“那接下来，我就要告诉你一些更为前沿，更颠覆你认知的知识了。就是，根据量子力学，并不是宇宙创造出了你这位观测者。而是</span><strong><span>因为你的观测，宇宙才存在</span></strong><span>。”</span></p><p><span>我：“啊？我虽然听说过，人则原理 </span><a href='https://baike.baidu.com/item/%E5%BC%BA%E4%BA%BA%E6%8B%A9%E5%8E%9F%E7%90%86/2294438'><span>Anthropic Cosmological Principle</span></a><span> 解释了，为什么宇宙参数 刚好适合生命存在。但是也没有你这样唯心主义呀！”</span></p><p><span>朋友解释：“正是因为最近的研究过于颠覆认知，才需要你抛弃过去的思维方式，学会用量子力学的思考工具。</span></p><ul><li><span>第一，你以为 </span><a href='https://baike.baidu.com/item/%E8%96%9B%E5%AE%9A%E8%B0%94%E7%9A%84%E7%8C%AB/554903'><span>薛定谔量子态的猫</span></a><span> 是在打开盒子的那一刻坍塌的吗？不。在猫的存活或死亡状态被记录下来，电话告知你，都还是平行宇宙的叠加态 </span><a href='https://baike.baidu.com/item/%E5%8F%A0%E5%8A%A0%E6%80%81'><span>superposition state</span></a><span>。只有在你大脑形成概念的时候，才坍塌。</span></li><li><span>第二，你每天睁开眼睛，都以为你只是睡了一觉吗？实际上，你完全有可能正在经历另外一个人的一天。只不过，你被注入了另外这个人的记忆。所有你没有怀疑过，你并不是他。</span></li><li><span>第三，我们每一个人，都是宇宙睁开的眼睛，帮助宇宙体验人世间的快乐。在宇宙沉睡的时候，宇宙的自我处于叠加态。只有在宇宙睁开眼睛的那一刹那，自我 才坍塌到了某一个人的肉身。这就和佛教的轮回观念一样。别人也是自己。爱别人，就是爱自己。</span></li><li><span>第四，宇宙是根据概率坍塌到某一个肉身的。如果宇宙大概率坍塌到50年前的你，而不是现在的你，那么你，或者说宇宙，下次睁开研究的时候，可能就是50年前。”</span></li></ul><p><span>朋友那天晚上说了很多话，喝了很多酒。我也分不清楚他哪些是真话，哪些是胡话了。他喝醉睡了过去。我整晚没睡。我在盘算着一个大的计划。第二天他酒醒之后，否认说过的关于轮回的话。看来他没办法继续帮我了。我只能自己帮自己。我不想余生生活在懊恼痛苦之中，我想救回我50年前的儿子。</span></p><h1 id='安乐死'><span>安乐死</span></h1><p><span>我约见了外科医生，说我不需要做心脏手术，延续自己寿命了。相反，我在安乐死的协议上签了字。安乐死协议还需要亲属的同意。我和妻子女儿解释了我的计划。我说，“如果我继续痛苦地活着的话，宇宙仍然将大概率 坍塌在现在。如果我选择自尽，那么未来的我概率为0。宇宙将大概率 会坍塌到过去，说不定就是在50年前，儿子还活着的时候。在那个时候，我不会再放弃我们的儿子。”</span></p><p><span>妻子完全不信我的鬼话。她问：“那你怎么告诉过去的你，别放弃？你没办法把现在的记忆带到过去。你要托梦给他吗？别痴人说梦了！”</span></p><p><span>我说：“我不确定，但是，我既然能够发现宇宙这个概率漏洞，结束宇宙的痛苦。那么我相信，宇宙有一种潜力，能够渡自己到西方极乐世界。请你为我开心呀，我的爱人。你就是我，我就是你，你开心，就是我的开心了。”</span></p><p><span>毒药在我的全身循环。弥留之际。我感觉到了无边的快乐。再也没有懊恼。我不知道我能否真的回到过去。但是我相信。</span></p><h1 id='番外'><span>番外</span></h1><p><span>我是谁？我在哪儿？我慢慢睁开眼睛，看到白大褂在身边。意识才慢慢恢复过来。原来我是陪儿子在医院。过去这几天我太累了。好几天没睡，为了儿子的病情。我最近睡醒之后，总有那么几秒钟的断片。不知道自己是谁。可能是太累了吧。</span></p><p><span>但是再累也没有儿子的命重要。儿子查出来心脏病。手术有风险。即使成功，也要用药物维系后半生。我做了什么孽呀！要让我的儿子替我赎罪？他那么小，那么无辜。要是我做错了，就让我来承担吧！为什么要连累别人？听到医生关于手术风险的描述。我动摇了。是不是相比于风险，让儿子高质量，快乐地度过生命最后的几个月更好？</span></p><p><span>我的思想在斗争。我特别软弱。但是这次，我仿佛听见了另一种声音：别放弃，想清楚，别遗憾！似乎有一束金光照亮了我。我这几天如一团乱麻的思绪突然解开了。我豁然开朗。我为什么只能在 被安排的命运里面做选择？上帝给我这双手，不就是为了让我改变命运吗？我不屈不挠，逆天改命，这不才是生而为人的意义吗？我去其他地方求医。一定有更好的办法的。我要救活我的儿子！</span></p><p>&nbsp;</p><p><span>「完」</span></p><p><span>作者：Alex小二哥</span>
+<span>日期：2022-03-19</span></p><blockquote><p><span> 汤姆·谢克斯: “冷斑”可能是由我们的宇宙和另一个宇宙所碰撞造成的。</span><a href='https://www.chinanews.com.cn/m/gj/2017/05-19/8228366.shtml' target='_blank' class='url'>https://www.chinanews.com.cn/m/gj/2017/05-19/8228366.shtml</a></p></blockquote></div></div>
+</body>
+</html>
